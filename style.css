@@ -43,23 +43,23 @@ body {
     flex-flow: row wrap;
 }
 
-.item1 {
+.Name {
     grid-area: header;
 }
 
-.item2 {
+.Image {
     grid-area: menu;
 }
 
-.item3 {
+.Department {
     grid-area: main;
 }
 
-.item4 {
+.EmpID {
     grid-area: right;
 }
 
-.item5 {
+.Level {
     grid-area: footer;
 }
 
