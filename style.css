@@ -44,6 +44,7 @@ body {
 }
 
 .Name {
+    font-family: "Trirong", serif;
     grid-area: header;
 }
 
@@ -52,14 +53,17 @@ body {
 }
 
 .Department {
+    font-family: "Trirong", serif;
     grid-area: main;
 }
 
 .EmpID {
+    font-family: "Trirong", serif;
     grid-area: right;
 }
 
 .Level {
+    font-family: "Trirong", serif;
     grid-area: footer;
 }
 
