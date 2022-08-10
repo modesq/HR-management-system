@@ -29,12 +29,6 @@ console.log("Employee name: " + employee5.fullName + "\n" + "Employee salary: " 
 console.log("Employee name: " + employee6.fullName + "\n" + "Employee salary: " + employee6.salary);
 console.log("Employee name: " + employee7.fullName + "\n" + "Employee salary: " + employee7.salary);
 
-// Employee.prototype.render = function() {
-//     document.getElementsByClassName("item1").write;
-// }
-
-// employee1.render();
-
 function generateSalary(level) {
     if (level === "Senior") {
         let min = 1500;
