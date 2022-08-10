@@ -1,6 +1,6 @@
 'use strict'
 
-
+var employees = [];
 var counter = 1000;
 
 function Employee(fullName, department, level, imgLink) {
@@ -10,6 +10,8 @@ function Employee(fullName, department, level, imgLink) {
     this.imgLink = imgLink;
     this.salary = generateSalary(level);
     this.employeeID = generateEmpID();
+
+    employees.push(this);
 }
 
 const employee1 = new Employee("Ghazi Samer", "Administration", "Senior", "./images/avatar-cd104213bcc8422a34755aa323557594.jpg");
@@ -28,6 +30,17 @@ console.log("Employee name: " + employee4.fullName + "\n" + "Employee salary: " 
 console.log("Employee name: " + employee5.fullName + "\n" + "Employee salary: " + employee5.salary);
 console.log("Employee name: " + employee6.fullName + "\n" + "Employee salary: " + employee6.salary);
 console.log("Employee name: " + employee7.fullName + "\n" + "Employee salary: " + employee7.salary);
+
+Employee.prototype.render = function () {
+    document.write(`<div class="Image"><img src=" ${this.imgLink}" height="300"
+    width="300"></div>`)
+    document.write(`<p>Employee name : ${this.fullName}</p>`)
+    document.write(`<p>Department : ${this.department}</p>`)
+    document.write(`<p>Employee salary: ${this.salary}</p>`)
+
+    document.write(`<p></p>`)
+}
+
 
 function generateSalary(level) {
     if (level === "Senior") {
@@ -49,4 +62,8 @@ function generateSalary(level) {
 
 function generateEmpID() {
     return counter++;
+}
+
+for (let i = 0; i < employees.length; i++) {
+    employees[i].render();
 }
